@@ -1,0 +1,16 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30104.148
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{d48ed225-56ea-4f19-b830-df6a6b1b2fb8}") = "Business","Business\Business.csproj", "{2c88190a-c449-43e4-b264-04c3d094ff43}"
+EndProject
+Project("{98b29bb3-6cab-4ed5-8e1e-cfa6c6ed0568}") = "Entity","Entity\Entity.csproj", "{4d80adaf-6928-4bc0-9c02-21ad2b4aa7c8}"
+EndProject
+Project("{aca626c8-3d0e-4e27-b95d-789e503fb64e}") = "DataAccess","DataAccess\DataAccess.csproj", "{9f067f92-17fe-49b5-a555-c185c091d5e0}"
+EndProject
+Project("{db912c27-dd9d-4295-8d70-bcee8b9fcd51}") = "Core","Core\Core.csproj", "{b83f5484-e96c-4f94-8f71-5db93448534e}"
+EndProject
+Project("{5bbf9c00-84ea-41a0-a568-a05d29874eaa}") = "WebApi","WebApi\WebApi.csproj", "{67510922-d8ba-4dfa-9c01-3fdd447b93fa}"
+EndProject
+Project("{9d4ee9f6-9c16-40a2-bab8-00288555b05d}") = "Web","Web\Web.csproj", "{95792bd9-67cf-4768-965f-7f8aab9b3873}"
+EndProject

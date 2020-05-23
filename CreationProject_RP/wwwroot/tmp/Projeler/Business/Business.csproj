@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+      <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+<ItemGroup>
+  <PackageReference Include="Autofac" Version="5.1.2" />
+
+</ItemGroup>
+<ItemGroup>
+  <ProjectReference Include="..\DataAccess\DataAccess.csproj" />
+<ProjectReference Include="..\Entity\Entity.csproj" />
+
+</ItemGroup>
+<ItemGroup>
+  <Folder Include="Dto\Response\" />
+<Folder Include="Dto\Request\" />
+<Folder Include="Abstract\" />
+<Folder Include="Dto\" />
+<Folder Include="Concrete\" />
+<Folder Include="IOC\" />
+<Folder Include="Language\" />
+<Folder Include="Utility\" />
+
+</ItemGroup>
+</Project>
