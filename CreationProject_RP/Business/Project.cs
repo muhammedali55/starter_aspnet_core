@@ -97,15 +97,18 @@ namespace CreationProject_RP.Business
             CreateRepositoryPaternFolderStructure();
             var fileName = _hostingEnvironment.WebRootPath + @"\tmp\";
             string path = fileName + "\\" + _projectName + "\\" + _projectName + ".sln";
-            if (!System.IO.File.Exists(path))
+            if (!File.Exists(path))
             {
                 // Create a file to write to.
-                using (StreamWriter sw = System.IO.File.CreateText(path))
+                using (StreamWriter sw = File.CreateText(path))
                 {
                     sw.WriteLine("Microsoft Visual Studio Solution File, Format Version 12.00");
                     sw.WriteLine("# Visual Studio Version 16");
                     sw.WriteLine("VisualStudioVersion = 16.0.30104.148");
                     sw.WriteLine("MinimumVisualStudioVersion = 10.0.40219.1");
+                    sw.WriteLine("Project(\"{" + Guid.NewGuid() + "}\") = \"Web\"," +
+                     "\"Web\\Web.csproj\", \"{" + Guid.NewGuid() + "}\"");
+
                     sw.WriteLine("Project(\"{" + Guid.NewGuid() + "}\") = \"Business\"," +
                         "\"Business\\Business.csproj\", \"{" + Guid.NewGuid() + "}\"");
                     sw.WriteLine("EndProject");
@@ -121,8 +124,6 @@ namespace CreationProject_RP.Business
                     sw.WriteLine("Project(\"{" + Guid.NewGuid() + "}\") = \"WebApi\"," +
                       "\"WebApi\\WebApi.csproj\", \"{" + Guid.NewGuid() + "}\"");
                     sw.WriteLine("EndProject");
-                    sw.WriteLine("Project(\"{" + Guid.NewGuid() + "}\") = \"Web\"," +
-                      "\"Web\\Web.csproj\", \"{" + Guid.NewGuid() + "}\"");
                     sw.WriteLine("EndProject");
 
                 }
