@@ -191,7 +191,14 @@
                                             </div>
 
                                             <script>
-                                              
+
+                                                function check_names(name) {
+                                                    var exist = document.querySelector(`[id^="id_${name}"]`);
+                                                    if (exist != null) {
+                                                        return true;
+                                                    }
+                                                    return false;
+                                                }
 
                                                 function delete_list(name) {
                                                     var list = document.getElementById("entity_list");
@@ -207,6 +214,9 @@
                                                     var name_entity = document.getElementById("entity_name").value;
                                                     if (name_entity == "") {
                                                         alert("Entity Name not Empty");
+                                                    }
+                                                    else if (check_names(name_entity)) {
+                                                        alert("Entity names cannot be the same");
                                                     }
                                                     else {
                                                         var list = document.createElement("li");
